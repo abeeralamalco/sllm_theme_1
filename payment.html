@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
+    <title>سلم</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600&family=Roboto:ital,wght@0,400;0,500;1,300;1,400;1,500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/bootstrap.rtl.min.css" />
+    <link rel="stylesheet" href="./css/Home.css" />
+  </head>
+  <body>
+    <!-- Start nav bar  -->
+    <nav
+      class="navbar navbar-expand-lg bg-light sticky-top sm-7-dark lg-bg-light"
+    >
+      <div class="container px-1 px-sm-3">
+        <a class="navbar-brand me-0" href="./Home.html">
+          <img src="./assets/logo.png" alt="logo" />
+        </a>
+
+        <!-- mobil Search input -->
+        <!-- <input placeholder="ابحث هنا" class="d-lg-none" /> -->
+        <div class="position-relative">
+          <button id="resSerarch" class="d-lg-none btn me-3">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="18"
+              height="19"
+              fill="#000"
+              class="bi bi-search"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"
+              />
+            </svg>
+          </button>
+          <div id="smSearch" class="SearchForm d-lg-none">
+            <input />
+            <button>بحث</button>
+          </div>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="30"
+              height="30"
+              fill="currentColor"
+              class="bi bi-list"
+              viewBox="0 0 16 16"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"
+              />
+            </svg>
+          </button>
+        </div>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <div
+            class="container col-lg-9 me-0 d-flex justify-content-between bg-light"
+          >
+            <ul class="navbar-nav ms-lg-0 ms-sm-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a
+                  class="nav-link active"
+                  aria-current="page"
+                  href="./Home.html"
+                  >الرئيسية</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">الأقسام</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./products.html">المنتجات</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">عن المتجر</a>
+              </li>
+              <li class="nav-item d-lg-none">
+                <a class="nav-link" href="./auth.html">دخول / تسجيل</a>
+              </li>
+              <li class="nav-item d-lg-none">
+                <a class="nav-link" href="./cart.html">عربة التسوق</a>
+              </li>
+            </ul>
+            <div class="navLeft d-none d-lg-flex align-items-center">
+              <a class="nav-link p-0 me-2" href="./auth.html">دخول / تسجيل</a>
+              <div class="iconContainer">
+                <button id="lgSearchbtn" class="openSearch">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="18"
+                    height="19"
+                    fill="#000"
+                    class="bi bi-search"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"
+                    />
+                  </svg>
+                </button>
+                <!-- Search form -->
+                <div id="lgSearch" class="SearchForm">
+                  <input />
+                  <button>بحث</button>
+                </div>
+              </div>
+              <div class="iconContainer ms-2 me-2">
+                <button class="openCart">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="18"
+                    height="19"
+                    fill="#000"
+                    class="bi bi-cart3"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"
+                    />
+                  </svg>
+                </button>
+
+                <!-- the card menu -->
+                <ul class="cartmenu">
+                  <li>
+                    <img
+                      class="img-fluid"
+                      src="./assets/cartProduct.png"
+                      alt="carProduct"
+                    />
+                    <a href="./product.html"> <p>كأس كنتو 350 مل (زيتي)</p> </a>
+                    <button>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="20"
+                        height="20"
+                        fill="currentColor"
+                        class="bi bi-x-circle"
+                        viewBox="0 0 16 16"
+                      >
+                        <path
+                          d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"
+                        />
+                        <path
+                          d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"
+                        />
+                      </svg>
+                    </button>
+                  </li>
+                  <li>
+                    <img
+                      class="img-fluid"
+                      src="./assets/cartProduct.png"
+                      alt="carProduct"
+                    />
+                    <a href="./product.html"> <p>كأس كنتو 350 مل (زيتي)</p> </a>
+                    <button>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="20"
+                        height="20"
+                        fill="currentColor"
+                        class="bi bi-x-circle"
+                        viewBox="0 0 16 16"
+                      >
+                        <path
+                          d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"
+                        />
+                        <path
+                          d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"
+                        />
+                      </svg>
+                    </button>
+                  </li>
+                  <li>
+                    <img
+                      class="img-fluid"
+                      src="./assets/cartProduct.png"
+                      alt="carProduct"
+                    />
+                    <a href="./product.html"> <p>كأس كنتو 350 مل (زيتي)</p> </a>
+                    <button>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="20"
+                        height="20"
+                        fill="currentColor"
+                        class="bi bi-x-circle"
+                        viewBox="0 0 16 16"
+                      >
+                        <path
+                          d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"
+                        />
+                        <path
+                          d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"
+                        />
+                      </svg>
+                    </button>
+                  </li>
+                  <li>
+                    <img
+                      class="img-fluid"
+                      src="./assets/cartProduct.png"
+                      alt="carProduct"
+                    />
+                    <a href="./product.html"> <p>كأس كنتو 350 مل (زيتي)</p> </a>
+                    <button>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="20"
+                        height="20"
+                        fill="currentColor"
+                        class="bi bi-x-circle"
+                        viewBox="0 0 16 16"
+                      >
+                        <path
+                          d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"
+                        />
+                        <path
+                          d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"
+                        />
+                      </svg>
+                    </button>
+                  </li>
+                  <div class="list-buttons">
+                    <button class="close">اغلاق</button>
+                    <a href="./cart.html" class="gotocart">عربة التسوق</a>
+                  </div>
+                </ul>
+              </div>
+              <!-- model to close the SearchForm and cartmenu -->
+            </div>
+          </div>
+        </div>
+        <div class="modelclose"></div>
+      </div>
+    </nav>
+    <!-- End nav bar  -->
+
+    <!-- To up button -->
+    <button id="up">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="25"
+        height="25"
+        fill="currentColor"
+        class="bi bi-chevron-double-up"
+        viewBox="0 0 16 16"
+      >
+        <path
+          fill-rule="evenodd"
+          d="M7.646 2.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 3.707 2.354 9.354a.5.5 0 1 1-.708-.708l6-6z"
+        />
+        <path
+          fill-rule="evenodd"
+          d="M7.646 6.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 7.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z"
+        />
+      </svg>
+    </button>
+
+    <!-- Start the main section  -->
+    <main class="pt-5 pb-5">
+      <!-- product header start -->
+      <div class="container productsheader">
+        <nav style="--bs-breadcrumb-divider: '>'" aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="./Home.html">الرئيسية</a></li>
+            <li class="breadcrumb-item">
+              <a href="./cart.html">سلة المشتريات</a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">
+              إنهاء الطلب
+            </li>
+          </ol>
+        </nav>
+      </div>
+      <div class="container my-5">
+        <div class="row">
+          <!-- address form -->
+          <div class="col-lg-6">
+            <h4 class="my-3">طريقة الدفع</h4>
+            <ul
+              class="nav nav-pills mb-3 paymentoptions"
+              id="pills-tab"
+              role="tablist"
+            >
+              <li class="nav-item" role="presentation">
+                <button
+                  class="nav-link active"
+                  id="pills-mada-tab"
+                  data-bs-toggle="pill"
+                  data-bs-target="#pills-mada"
+                  type="button"
+                  role="tab"
+                  aria-controls="pills-mada"
+                  aria-selected="true"
+                >
+                  <img src="./assets/mada.png" alt="mada" />
+                </button>
+              </li>
+
+              <li class="nav-item" role="presentation">
+                <button
+                  class="nav-link"
+                  id="pills-visa-tab"
+                  data-bs-toggle="pill"
+                  data-bs-target="#pills-visa"
+                  type="button"
+                  role="tab"
+                  aria-controls="pills-visa"
+                  aria-selected="false"
+                >
+                  <img src="./assets/visa.png" alt="" />
+                </button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button
+                  class="nav-link"
+                  id="pills-stc-tab"
+                  data-bs-toggle="pill"
+                  data-bs-target="#pills-stc"
+                  type="button"
+                  role="tab"
+                  aria-controls="pills-stc"
+                  aria-selected="false"
+                >
+                  <img src="./assets/stc.png" alt="visa" />
+                </button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button
+                  class="nav-link"
+                  id="pills-bank-tab"
+                  data-bs-toggle="pill"
+                  data-bs-target="#pills-bank"
+                  type="button"
+                  role="tab"
+                  aria-controls="pills-bank"
+                  aria-selected="false"
+                >
+                  <img src="./assets/bank.png" alt="bank" /> تحويل بنكي
+                </button>
+              </li>
+            </ul>
+            <div class="tab-content" id="pills-tabContent">
+              <div
+                class="tab-pane fade show active"
+                id="pills-mada"
+                role="tabpanel"
+                aria-labelledby="pills-mada-tab"
+              >
+                <form class="orderForm">
+                  <p class="mt-4 mb-2">رقم البطاقة</p>
+                  <input
+                  class="formInput"
+                   type="number"
+                    style="text-align: end"
+                    placeholder="23456789"
+                  />
+                  <p class="my-2">الشهر / السنة</p>
+                  <input  class="formInput" type="text" placeholder="الشهر / السنة" />
+                  <p class="my-2">رقم التحقق (CVC)</p>
+                  <input class="formInput"  class="formInput" type="text" placeholder="123" />
+                  <button class="btn submit">تأكيد</button>
+                </form>
+              </div>
+              <div
+                class="tab-pane fade"
+                id="pills-visa"
+                role="tabpanel"
+                aria-labelledby="pills-visa-tab"
+              >
+                <form class="orderForm">
+                  <p class="mt-4 mb-2">رقم البطاقة</p>
+                  <input 
+                  class="formInput"
+                    type="number"
+                    style="text-align: end"
+                    placeholder="23456789"
+                  />
+                  <p class="my-2">الشهر / السنة</p>
+                  <input class="formInput" type="text" placeholder="الشهر / السنة" />
+                  <p class="my-2">رقم التحقق (CVC)</p>
+                  <input  class="formInput" type="text" placeholder="123" />
+                  <button class="btn submit">تأكيد</button>
+                </form>
+              </div>
+              <div
+                class="tab-pane fade"
+                id="pills-stc"
+                role="tabpanel"
+                aria-labelledby="pills-stc-tab"
+              >
+                <form class="orderForm">
+                  <p class="text-start mt-4">رقم الهاتف</p>
+                  <div class="d-flex .codeSelect">
+                    <input
+                    class="formInput"
+                      type="number"
+                      style="text-align: end"
+                      placeholder="12345"
+                    />
+                    <select class="form-select d-none">
+                      <option img="./assets/saudi.png" value="997">+997</option>
+                      <option img="./assets/saudi.png" value="997">+55</option>
+                      <option img="./assets/saudi.png" value="997">+966</option>
+                    </select>
+                    <div class="code-select">
+                      <div class="btn-select"  value="997">
+                          <img src="./assets/saudi.png"/><span>+997</span></li>
+                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down" viewBox="0 0 16 16">
+                            <path d="M3.204 5h9.592L8 10.481 3.204 5zm-.753.659 4.796 5.48a1 1 0 0 0 1.506 0l4.796-5.48c.566-.647.106-1.659-.753-1.659H3.204a1 1 0 0 0-.753 1.659z"/>
+                          </svg>              
+                      </div>
+                      <div class="keylist">
+                        <ul id="keys">
+                          <li class="optemp" style="display:none"><img src=""/><span></span></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <button class="btn submit">تأكيد</button>
+                </form>
+              </div>
+              <div
+                class="tab-pane fade"
+                id="pills-bank"
+                role="tabpanel"
+                aria-labelledby="pills-bank-tab"
+              >
+                <div class="row my-5 BAdata">
+                  <div class="col-lg-2">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="50"
+                      height="50"
+                      fill="#999"
+                      class="bi bi-person-video2"
+                      viewBox="0 0 16 16"
+                    >
+                      <path d="M10 9.05a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z" />
+                      <path
+                        d="M2 1a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2H2ZM1 3a1 1 0 0 1 1-1h2v2H1V3Zm4 10V2h9a1 1 0 0 1 1 1v9c0 .285-.12.543-.31.725C14.15 11.494 12.822 10 10 10c-3.037 0-4.345 1.73-4.798 3H5Zm-4-2h3v2H2a1 1 0 0 1-1-1v-1Zm3-1H1V8h3v2Zm0-3H1V5h3v2Z"
+                      />
+                    </svg>
+                  </div>
+                  <div class="col-lg-10">
+                    <div class="container px-sm-0 px-md-3">
+                      <div class="col-sm-12">
+                        <div
+                          class="d-flex justify-content-between align-items-center mb-4"
+                        >
+                          <p class="m-0">صاحب الحساب</p>
+                          <p class="m-0" id="pname">مؤسسة الكأس الفاخر</p>
+                          <button
+                            class="btn"
+                            type="button"
+                            onclick="copy('pname')"
+                          >
+                            <span id="pnamecopy">تم النسخ</span>
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="18"
+                              height="18"
+                              fill="currentColor"
+                              class="bi bi-clipboard me-3"
+                              viewBox="0 0 16 16"
+                            >
+                              <path
+                                d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"
+                              />
+                              <path
+                                d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"
+                              />
+                            </svg>
+                            نسخ
+                          </button>
+                        </div>
+                        <div
+                          class="d-flex justify-content-between align-items-center mb-4"
+                        >
+                          <p class="m-0">رقم الحساب</p>
+                          <p class="m-0" id="acnum">511000010006086056287</p>
+                          <button
+                            class="btn"
+                            type="button"
+                            onclick="copy('acnum')"
+                          >
+                            <span id="acnumcopy">تم النسخ</span>
+
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="18"
+                              height="18"
+                              fill="currentColor"
+                              class="bi bi-clipboard me-3"
+                              viewBox="0 0 16 16"
+                            >
+                              <path
+                                d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"
+                              />
+                              <path
+                                d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"
+                              />
+                            </svg>
+                            نسخ
+                          </button>
+                        </div>
+                        <div
+                          class="d-flex justify-content-between align-items-center mb-4"
+                        >
+                          <p class="m-0">رقم الآيبان</p>
+                          <p class="m-0" id="epan">SA5580000511608016056287</p>
+                          <button
+                            class="btn"
+                            type="button"
+                            onclick="copy('epan')"
+                          >
+                            <span id="epancopy">تم النسخ</span>
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="18"
+                              height="18"
+                              fill="currentColor"
+                              class="bi bi-clipboard me-3"
+                              viewBox="0 0 16 16"
+                            >
+                              <path
+                                d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"
+                              />
+                              <path
+                                d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"
+                              />
+                            </svg>
+                            نسخ
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <form class="orderForm">
+                  <p class="mt-4 mb-2">إسم صاحب الحساب الي تم التحويل منه</p>
+                  <input class="formInput" type="text" placeholder="الاسم" />
+                  <label for="myfile" class="fileupload">
+                    <input
+                      type="file"
+                      id="myfile"
+                      name="myfile"
+                      accept="image/png, image/gif, image/jpeg"
+                    />
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="30"
+                      height="30"
+                      fill="currentColor"
+                      class="bi bi-cloud-upload me-5"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M4.406 1.342A5.53 5.53 0 0 1 8 0c2.69 0 4.923 2 5.166 4.579C14.758 4.804 16 6.137 16 7.773 16 9.569 14.502 11 12.687 11H10a.5.5 0 0 1 0-1h2.688C13.979 10 15 8.988 15 7.773c0-1.216-1.02-2.228-2.313-2.228h-.5v-.5C12.188 2.825 10.328 1 8 1a4.53 4.53 0 0 0-2.941 1.1c-.757.652-1.153 1.438-1.153 2.055v.448l-.445.049C2.064 4.805 1 5.952 1 7.318 1 8.785 2.23 10 3.781 10H6a.5.5 0 0 1 0 1H3.781C1.708 11 0 9.366 0 7.318c0-1.763 1.266-3.223 2.942-3.593.143-.863.698-1.723 1.464-2.383z"
+                      />
+                      <path
+                        fill-rule="evenodd"
+                        d="M7.646 4.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707V14.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3z"
+                      />
+                    </svg>
+                    الرجاء إرفاق صورة الإيصال
+                  </label>
+                  <button class="btn submit">تأكيد</button>
+                </form>
+              </div>
+            </div>
+          </div>
+          <!-- order total -->
+          <div class="col-lg-6 text-lg-end">
+            <h4 class="my-3 text-md-center text-lg-start ms-lg-5">
+              إجمالي السلة
+            </h4>
+            <div class="container col-lg-10 mt-3 mb-5 p-2 orderSummery">
+              <div class="row align-items-center my-3">
+                <div
+                  class="container d-flex align-items-center justify-content-between px-5"
+                >
+                  <p>عدد الأصناف</p>
+                  <p>2</p>
+                </div>
+              </div>
+              <div class="row align-items-center my-3">
+                <div
+                  class="container d-flex align-items-center justify-content-between px-5"
+                >
+                  <p>مجموع المنتجات</p>
+                  <p>٣٢٠ ر.س</p>
+                </div>
+              </div>
+              <hr class="px-5" />
+              <div class="row align-items-center my-3">
+                <div
+                  class="container d-flex align-items-center justify-content-between px-5"
+                >
+                  <p>الإجمالي</p>
+                  <p>٣٢٠ ر.س</p>
+                </div>
+              </div>
+            </div>
+            <div class="container mb-5">
+              <div class="row">
+                <div
+                  class="m-auto col-lg-10 text-center cartbuttons d-flex justify-content-between px-0"
+                >
+                  <a href="./Home.html">متابعة التسوق</a>
+                  <a class="order" href="./orderfinish.html">إنهاء الطلب</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-- End the main section  -->
+
+  <!-- footer section -->
+  <footer class="footer pt-5 pb-5 text-center text-md-start">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 col-lg-4 text-center">
+          <h4 class="mt-3 mt-lg-0">اشترك في القائمة البريدية الان</h4>
+          <span class="mb-5">اشتركي ليصلك كل جديد، من منتجاتنا الجميلة</span>
+          <div class="footerForm mt-4">
+            <input class="formInput" type="email" placeholder="البريد الالكتروني" />
+            <button class="btn-dark">! اشترك</button>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <h4 class="mt-3 mt-lg-0">اتصل بنا</h4>
+          <span>رقم الواتساب : 00977592409245</span>
+          <span class="d-block my-3">البريد : contact@test.com</span>
+          <div class="mb-4">
+            <img
+              src="./assets/instagram.png"
+              class="img-fluid me-4"
+              alt="instagram"
+            />
+            <img
+              src="./assets/facebook.png"
+              class="img-fluid"
+              alt="facebook"
+            />
+          </div>
+          <div
+            class="d-flex justify-content-between align-items-center pe-lg-5"
+          >
+            <img src="./assets/mada.png" class="img-fluid" alt="mada" />
+            <img src="./assets/visa.png" class="img-fluid" alt="visa" />
+            <img src="./assets/stc.png" class="img-fluid" alt="stc" />
+            <img src="./assets/bank.png" class="img-fluid" alt="bank" />
+            <img src="./assets/money.png" class="img-fluid" alt="money" />
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-2">
+          <h4 class="mt-3 mt-lg-0">إضافات</h4>
+          <ul class="list-unstyled lh-lg">
+            <li><a href="">الشركات</a></li>
+            <ul class="list-unstyled lh-lg ms-3">
+              <li><a href="">قسائم الهدايا</a></li>
+              <li><a href="">العروض المميزة</a></li>
+              <li><a href=""> خريطة الموقع</a></li>
+            </ul>
+            <li><a href="">حسابي</a></li>
+          </ul>
+        </div>
+        <div class="col-md-6 col-lg-2">
+          <h4 class="mt-3 mt-lg-0">معلومات</h4>
+          <ul class="list-unstyled lh-lg">
+            <li><a href=""> عن سلم</a></li>
+            <ul class="list-unstyled lh-lg ms-3">
+              <li><a href="">معلومات التوصيل </a></li>
+              <li><a href="">الاسئلة الشائعة </a></li>
+              <li><a href="">الشروط والأحكام </a></li>
+            </ul>
+            <li><a href="">اتصل بنا</a></li>
+          </ul>
+        </div>
+      </div>
+      <p class="text-center mt-5">جميع الحقوق محفوظة © 2022</p>
+    </div>
+  </footer>
+    <script src="./js/payment.js"></script>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
