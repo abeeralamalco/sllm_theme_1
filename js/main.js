@@ -1,4 +1,3 @@
-
 // open and close the srarch and cart
 const open = document.querySelector('.openCart')
 const menu = document.querySelector('.cartmenu')
